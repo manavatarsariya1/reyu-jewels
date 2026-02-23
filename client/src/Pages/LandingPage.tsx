@@ -6,17 +6,25 @@ import DiamondShapes from '../components/LandingPage/DiamondShapes'
 import DiamondTypesSection from '../components/LandingPage/DiamondTypesSection'
 import CollectionSection from '../components/LandingPage/CollectionSection'
 import HowItWorks from '../components/LandingPage/HowItWorks'
+import ClientReviewSection from '../components/LandingPage/ClientReviewSection'
+import VoicesOfDistinction from '../components/LandingPage/VoicesOfDistinction'
 
 const LandingPage = () => {
   return (
     <div className='bg-[#202020] '>
       <Navbar />
-      <HeroSection/>
-      <AboutSection/>
-      <DiamondShapes/>
-      <DiamondTypesSection/>
-      <CollectionSection/>
-      <HowItWorks/>
+      <HeroSection />
+      <AboutSection />
+      <DiamondShapes />
+      <DiamondTypesSection />
+      <CollectionSection />
+      <HowItWorks />
+      <div className=' bg-black mx-3 rounded-3xl flex  flex-col gap-10 mt-10'>
+
+        <ClientReviewSection />
+        <VoicesOfDistinction />
+
+      </div>
     </div>
   )
 }

@@ -77,13 +77,8 @@ const DiamondShapes = () => {
                 onMouseEnter={() => { isPausedRef.current = true; }}
                 onMouseLeave={() => { isPausedRef.current = false; }}
             >
-                {/* Left fade */}
-                <div className="absolute left-0 top-0 h-full w-20 sm:w-32 z-10 pointer-events-none"
-                    style={{ background: 'linear-gradient(to right, #111 0%, transparent 100%)' }} />
-                {/* Right fade */}
-                <div className="absolute right-0 top-0 h-full w-20 sm:w-32 z-10 pointer-events-none"
-                    style={{ background: 'linear-gradient(to left, #111 0%, transparent 100%)' }} />
-
+                
+               
                 {/* Scrolling Track */}
                 <div
                     ref={trackRef}

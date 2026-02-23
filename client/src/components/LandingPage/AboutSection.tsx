@@ -55,7 +55,7 @@ const AboutSection = () => {
     };
 
     return (
-        <div id="about" className=" w-full xl:px-20 px-5 py-40">
+        <div id="about" className=" w-full xl:px-20 px-5 xl:py-40 py-15">
             <div className="flex flex-col xl:flex-row gap-10 xl:gap-16 items-start">
 
                 {/* ===== LEFT — About Text ===== */}

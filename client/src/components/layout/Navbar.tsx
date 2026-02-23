@@ -15,7 +15,7 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="sticky top-0 px-5 sm:px-10 xl:px-20 py-3 z-50 bg-[#202020]">
+        <div className="sticky top-0 px-5 sm:px-10 xl:px-20 py-5 z-50 bg-[#202020] ">
             <div className="flex justify-between items-center w-full">
 
                 {/* Logo */}
