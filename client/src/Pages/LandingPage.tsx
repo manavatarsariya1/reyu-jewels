@@ -1,4 +1,9 @@
-import React from 'react'
+import CEOSection from "../components/LandingPage/CEOSection";
+import Certificates from "../components/LandingPage/Certificates";
+import Contact from "../components/LandingPage/Contact"
+import Footer from "../components/layout/Footer";
+
+
 import Navbar from '../components/layout/Navbar'
 import HeroSection from '../components/LandingPage/HeroSection'
 import AboutSection from '../components/LandingPage/AboutSection'
@@ -25,8 +30,12 @@ const LandingPage = () => {
         <VoicesOfDistinction />
 
       </div>
+      <CEOSection />
+      <Contact />
+      <Certificates />
+      <Footer />
     </div>
   )
 }
 
-export default LandingPage
+export default LandingPage;

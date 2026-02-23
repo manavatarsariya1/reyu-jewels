@@ -1,0 +1,22 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        gilroy: ["Gilroy", "sans-serif"],
+      },
+    },
+  },
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
+};
+
+export default config;
