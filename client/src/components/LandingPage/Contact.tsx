@@ -83,7 +83,7 @@ const validate = () => {
             noValidate
             className="bg-black p-6 sm:p-8 md:p-10 lg:p-14 flex flex-col gap-3"
           >
-            <h3 className="text-white text-lg md:text-xl lg:text-[22px] font-medium font-gilroy mb-2">
+            <h3 className="text-white lg:text-start text-center text-lg md:text-xl lg:text-[22px] font-medium font-gilroy mb-2">
               Send Enquiry
             </h3>
 
@@ -146,7 +146,7 @@ const validate = () => {
 
           {/* ── SHOWROOM PANEL ──────────────────────────────────── */}
           <div className="bg-black p-6 sm:p-8 md:p-10 lg:p-14 flex flex-col gap-6 md:gap-8">
-            <h3 className="text-white text-lg md:text-xl lg:text-[22px] font-gilroy mb-2">
+            <h3 className="text-white text-lg md:text-xl lg:text-[22px] font-gilroy mb-2 lg:text-start text-center">
               Visit Our Showroom
             </h3>
 

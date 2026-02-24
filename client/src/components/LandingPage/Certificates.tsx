@@ -2,58 +2,88 @@ import { useState, useRef, useEffect } from "react";
 import cert1 from "../../assets/LandingPage/cert1.png";
 import cert2 from "../../assets/LandingPage/cert2.png";
 import cert3 from "../../assets/LandingPage/cert3.png";
+import cert4 from "../../assets/LandingPage/cert4.png";
+import cert5 from "../../assets/LandingPage/cert5.png";
+import cert6 from "../../assets/LandingPage/cert6.png";
+import cert7 from "../../assets/LandingPage/cert7.png";
+import cert8 from "../../assets/LandingPage/cert8.png";
+import cert9 from "../../assets/LandingPage/cert9.png";
+
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 const certificates = [
   {
     id: 1,
     image: cert1,
-    file: "/certificates/LG739505913.pdf",
-    title: "Lab-Grown Diamond Certification – 3.02 Carat Marquise",
+    file: "/certificates/LG739576025.pdf",
+    title: "Lab-Grown Diamond Certification – 2.00 Carat Round Brilliant",
     description:
-      "IGI-certified marquise brilliant diamond grown through CVD technology. Graded G color, VS2 clarity, with excellent finish and no fluorescence.",
+      "IGI-certified 2.00 carat round brilliant laboratory-grown diamond. D color, VVS1 clarity, Ideal cut with Excellent polish and symmetry. HPHT grown (Type II) with no fluorescence.",
   },
   {
     id: 2,
     image: cert2,
-    file: "/certificates/LG739576025.pdf",
-    title: "Lab-Grown Diamond Certification – 2.00 Carat Round",
+    file: "/certificates/LG745524822.pdf",
+    title: "Lab-Grown Diamond Certification – 0.30 Carat Round Brilliant",
     description:
-      "IGI laboratory report for a D-color VVS1 round brilliant grown via HPHT method. Ideal cut with excellent polish and symmetry.",
+      "IGI-certified 0.30 carat round brilliant laboratory-grown diamond. D color, VVS1 clarity, Excellent cut with Excellent polish and symmetry. HPHT grown (Type II) with no fluorescence.",
   },
   {
     id: 3,
     image: cert3,
     file: "/certificates/LG742510222.pdf",
-    title: "Lab-Grown Diamond Certification – 1.75 Carat Cushion",
+    title: "Lab-Grown Diamond Certification – 0.28 Carat Round Brilliant",
     description:
-      "IGI-certified cushion brilliant diamond graded F color, VS2 clarity with no fluorescence and excellent craftsmanship.",
+      "IGI-certified 0.28 carat round brilliant laboratory-grown diamond. D color, VS1 clarity, Excellent cut with Excellent polish and symmetry. HPHT grown (Type II) with no fluorescence.",
   },
   {
     id: 4,
-    image: cert3,
+    image: cert4,
     file: "/certificates/LG742516947.pdf",
-    title: "Lab-Grown Diamond Certification – 1.75 Carat Cushion",
+    title: "Lab-Grown Diamond Certification – 3.51 Carat Oval Brilliant",
     description:
-      "IGI-certified cushion brilliant diamond graded F color, VS2 clarity with no fluorescence and excellent craftsmanship.",
+      "IGI-certified 3.51 carat oval brilliant laboratory-grown diamond. F color, VS2 clarity with Excellent polish and symmetry. CVD grown (Type IIa) with no fluorescence.",
   },
   {
     id: 5,
-    image: cert3,
-    file: "/certificates/LG775524822.pdf",
-    title: "Lab-Grown Diamond Certification – 1.75 Carat Cushion",
+    image: cert5,
+    file: "/certificates/LG745524822.pdf",
+    title: "Lab-Grown Diamond Certification – 0.30 Carat Round Brilliant",
     description:
-      "IGI-certified cushion brilliant diamond graded F color, VS2 clarity with no fluorescence and excellent craftsmanship.",
+      "IGI-certified 0.30 carat round brilliant laboratory-grown diamond. D color, VVS1 clarity, Excellent cut with Excellent polish and symmetry. HPHT grown (Type II) with no fluorescence.",
   },
   {
     id: 6,
-    image: cert3,
-    file: "/certificates/LG777514224.pdf",
-    title: "Lab-Grown Diamond Certification – 1.75 Carat Cushion",
+    image: cert6,
+    file: "/certificates/LG747514224.pdf",
+    title: "Lab-Grown Diamond Certification – 5.01 Carat Round Brilliant",
     description:
-      "IGI-certified cushion brilliant diamond graded F color, VS2 clarity with no fluorescence and excellent craftsmanship.",
+      "IGI-certified 5.01 carat round brilliant laboratory-grown diamond. E color, VS1 clarity, Ideal cut with Excellent polish and symmetry. CVD grown (Type IIa) with no fluorescence.",
   },
-
+  {
+    id: 7,
+    image: cert7,
+    file: "/certificates/LG749575501.pdf",
+    title: "Lab-Grown Diamond Certification – 2.51 Carat Round Brilliant",
+    description:
+      "IGI-certified 2.51 carat round brilliant laboratory-grown diamond. E color, VVS1 clarity, Ideal cut with Excellent polish and symmetry. CVD grown (Type IIa) with no fluorescence.",
+  },
+  {
+    id: 8,
+    image: cert8,
+    file: "/certificates/LG750507523.pdf",
+    title: "Lab-Grown Diamond Certification – 0.30 Carat Round Brilliant",
+    description:
+      "IGI-certified 0.30 carat round brilliant laboratory-grown diamond. D color, VVS2 clarity, Ideal cut with Excellent polish and symmetry. CVD grown (Type IIa) with no fluorescence.",
+  },
+  {
+    id: 9,
+    image: cert9,
+    file: "/certificates/LG754509296.pdf",
+    title: "Lab-Grown Diamond Certification – 3.01 Carat Round Brilliant",
+    description:
+      "IGI-certified 3.01 carat round brilliant laboratory-grown diamond. F color, VVS2 clarity, Ideal cut with Excellent polish and symmetry. CVD grown (Type IIa) with no fluorescence.",
+  },
 ];
 
 const VISIBLE_DESKTOP = 3;
@@ -123,10 +153,10 @@ const Certifications = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row  sm:justify-between sm:items-start gap-5 sm:gap-4 mb-8 sm:mb-10 lg:mb-12">
           <div>
-            <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-gilroy">
+            <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-gilroy sm:text-start text-center">
               Our Certifications
             </h2>
-            <p className="text-[#949391] mt-2 sm:mt-3 max-w-full sm:max-w-[500px] lg:max-w-[700px] text-sm sm:text-base font-montserrat">
+            <p className="text-[#949391] mt-2 sm:mt-3 max-w-full sm:max-w-[500px] lg:max-w-[700px] text-sm  sm:text-start text-center sm:text-base font-montserrat">
               We are proud to showcase our certifications and accreditations
               that demonstrate our commitment to quality, authenticity, and
               excellence in every piece we create.
@@ -134,16 +164,22 @@ const Certifications = () => {
           </div>
 
           {total > visibleCount && (
-            <div className="flex items-center gap-[10px] self-start sm:self-center shrink-0">
+            <div
+              className="flex items-center justify-center gap-[10px] 
+                ml-auto sm:ml-0 
+                self-end sm:self-center shrink-0 "
+            >
               <button
                 onClick={() => goTo(index - 1)}
                 disabled={atStart}
-                className={`w-[50px] h-[50px] flex items-center justify-center rounded-full transition-all duration-300
-                  ${
-                    atStart
-                      ? "bg-[#2A2A2A] text-white/30 "
-                      : "bg-[#2A2A2A] text-white hover:bg-[#3a3a3a]"
-                  }`}
+                className={`w-[38px] h-[38px] sm:w-[50px] sm:h-[50px]
+flex items-center justify-center rounded-full
+transition-all duration-300
+${
+  atStart
+    ? "bg-[#2A2A2A] text-white/30"
+    : "bg-[#2A2A2A] text-white hover:bg-[#3a3a3a]"
+}`}
               >
                 <FiArrowLeft className="text-[18px]" />
               </button>
@@ -151,12 +187,14 @@ const Certifications = () => {
               <button
                 onClick={() => goTo(index + 1)}
                 disabled={atEnd}
-                className={`w-[50px] h-[50px] flex items-center justify-center rounded-full transition-all duration-300
-                  ${
-                    atEnd
-                      ? "bg-[#C6A96B]/30 text-black/30 "
-                      : "bg-[#C6A96B] text-black hover:bg-[#b8953a]"
-                  }`}
+                className={`w-[38px] h-[38px] sm:w-[50px] sm:h-[50px]
+flex items-center justify-center rounded-full
+transition-all duration-300
+${
+  atEnd
+    ? "bg-[#C6A96B]/30 text-black/30"
+    : "bg-[#C6A96B] text-black hover:bg-[#b8953a]"
+}`}
               >
                 <FiArrowRight className="text-[18px]" />
               </button>
@@ -180,7 +218,7 @@ const Certifications = () => {
               className="group snap-center shrink-0 font-gilroy
                          bg-[#EFEFEF] rounded-3xl overflow-hidden
                          transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
-                         hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/40"
+                         hover:shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
               style={{
                 width: `clamp(280px, calc((100% - ${VISIBLE_DESKTOP - 1} * 2rem) / ${VISIBLE_DESKTOP}), 480px)`,
               }}
