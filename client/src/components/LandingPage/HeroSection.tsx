@@ -1,4 +1,4 @@
-import handImage from "../../assets/LandingPage/image1.png";
+import handImage from "../../assets/LandingPage/handImage.png";
 import diamondImage from "../../assets/LandingPage/diamond.png";
 
 // Mobile image panel height — seam sits exactly here

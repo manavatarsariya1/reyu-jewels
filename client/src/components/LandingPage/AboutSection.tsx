@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ring1 from "../../assets/LandingPage/AboutSection-img-1.png";
 import ring2 from "../../assets/LandingPage/AboutSection-img-2.png";
-import ring3 from "../../assets/LandingPage/AboutSection-img-3.png";
+import ring3 from "../../assets/LandingPage/AboutSection-img-4.png";
 
 const cards = [
     {
