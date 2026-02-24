@@ -28,7 +28,7 @@ const LandingPage = () => {
       <div className=' bg-black mx-3 rounded-3xl flex  flex-col gap-10 mt-10'>
 
         <ClientReviewSection />
-        <VoicesOfDistinction />
+        {/* <VoicesOfDistinction /> */}
 
       </div>
       <CEOSection />
