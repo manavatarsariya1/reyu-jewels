@@ -61,7 +61,7 @@ const CEOSection = () => {
   const [paused, setPaused] = useState(false);
 
   return (
-    <section className="bg-[#202020] py-10 md:py-16 lg:py-20 overflow-hidden">
+    <section className="bg-[#202020] pt-20 sm:pb-0 pb-8   overflow-hidden">
       {/* Infinite Marquee Animation */}
       <style>{`
         @keyframes marquee {
@@ -89,9 +89,9 @@ const CEOSection = () => {
             href="https://www.instagram.com/reyujewels"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 text-white/60 text-base sm:text-lg pr-10
+            className="flex-shrink-0 text-white/60 text-base sm:text-lg 
              hover:text-white font-montserrat transition-colors
-             tracking-wide pb-0.5 whitespace-nowrap"
+              pb-0.5 whitespace-nowrap"
           >
             Shop Instagram
           </a>

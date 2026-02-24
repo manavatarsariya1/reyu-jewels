@@ -11,30 +11,30 @@ const ContactSection = () => {
 
   const [errors, setErrors] = useState<any>({});
 
-const validate = () => {
-  const newErrors: any = {};
+  const validate = () => {
+    const newErrors: any = {};
 
-  if (!formData.fullName.trim())
-    newErrors.fullName = "Full name is required";
+    if (!formData.fullName.trim())
+      newErrors.fullName = "Full name is required";
 
-  if (!formData.email.trim()) {
-    newErrors.email = "Email is required";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
-    newErrors.email = "Invalid email address";
-  }
-
-  // Phone optional → validate only if user typed something
-  if (formData.phone.trim()) {
-    if (!/^[6-9]\d{9}$/.test(formData.phone.replace(/\s+/g, ""))) {
-      newErrors.phone = "Enter valid 10-digit Indian number";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
+      newErrors.email = "Invalid email address";
     }
-  }
 
-  // Message optional → no validation needed
+    // Phone optional → validate only if user typed something
+    if (formData.phone.trim()) {
+      if (!/^[6-9]\d{9}$/.test(formData.phone.replace(/\s+/g, ""))) {
+        newErrors.phone = "Enter valid 10-digit Indian number";
+      }
+    }
 
-  setErrors(newErrors);
-  return Object.keys(newErrors).length === 0;
-};
+    // Message optional → no validation needed
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (validate()) {
@@ -47,8 +47,7 @@ const validate = () => {
 
   /* ── Shared input class helper ────────────────────────────── */
   const inputClass = (field: string) =>
-    `bg-transparent border ${
-      errors[field] ? "border-[#B88F5F]" : "border-gray-600"
+    `bg-transparent border ${errors[field] ? "border-[#B88F5F]" : "border-gray-600"
     } h-12 px-4 text-white outline-none w-full
      focus:border-[#B88F5F] transition-colors duration-200 text-sm md:text-base`;
 
@@ -88,46 +87,45 @@ const validate = () => {
             </h3>
 
             {/* Full Name */}
-            <label className="text-gray-400 text-sm md:text-base font-montserrat">Full Name</label>
+            <label className="text-white text-sm md:text-base font-montserrat">Full Name</label>
             <input
               type="text"
               value={formData.fullName}
               onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-              className={inputClass("fullName")}
+              className={`${inputClass("fullName")} placeholder-gray-400`}
               placeholder="Your full name"
             />
             {errors.fullName && <p className="text-[#B88F5F] text-xs">{errors.fullName}</p>}
 
             {/* Email */}
-            <label className="text-gray-400 text-sm md:text-base mt-2 font-montserrat">Email Address</label>
+            <label className="text-white text-sm md:text-base mt-2 font-montserrat">Email Address</label>
             <input
               type="text"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className={inputClass("email")}
+              className={`${inputClass("email")} placeholder-gray-400`}
               placeholder="your@email.com"
             />
             {errors.email && <p className="text-[#B88F5F] text-xs">{errors.email}</p>}
 
             {/* Phone */}
-            <label className="text-gray-400 text-sm md:text-base mt-2 font-montserrat">Phone Number</label>
+            <label className="text-white text-sm md:text-base mt-2 font-montserrat">Phone Number</label>
             <input
               type="text"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className={inputClass("phone")}
-              placeholder="9898076868"
+              className={`${inputClass("phone")} placeholder-gray-400`}
+              placeholder="1234567890"
             />
             {errors.phone && <p className="text-[#B88F5F] text-xs">{errors.phone}</p>}
 
             {/* Message */}
-            <label className="text-gray-400 text-sm md:text-base mt-2 font-montserrat">Message</label>
+            <label className="text-white text-sm md:text-base mt-2 font-montserrat">Message</label>
             <textarea
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className={`bg-transparent border ${
-                errors.message ? "border[#B88F5F]" : "border-gray-600"
-              } h-36 px-4 py-3 text-white outline-none resize-none w-full
+              className={`bg-transparent border ${errors.message ? "border[#B88F5F]" : "border-gray-600"
+                } h-36 px-4 py-3 outline-none resize-none w-full placeholder-gray-400
                 focus:border-[#B88F5F] transition-colors duration-200 text-sm md:text-base`}
               placeholder="Tell us about your requirements..."
             />

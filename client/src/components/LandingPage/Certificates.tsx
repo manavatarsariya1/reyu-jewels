@@ -148,7 +148,7 @@ const Certifications = () => {
   const atEnd = index >= maxIndex;
 
   return (
-    <section className="w-full bg-[#202020] py-10 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-16 ">
+    <section id="certificates" className="w-full bg-[#202020] py-10 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-16 ">
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row  sm:justify-between sm:items-start gap-5 sm:gap-4 mb-8 sm:mb-10 lg:mb-12">
@@ -223,11 +223,11 @@ ${
                 width: `clamp(280px, calc((100% - ${VISIBLE_DESKTOP - 1} * 2rem) / ${VISIBLE_DESKTOP}), 480px)`,
               }}
             >
-              <div className="bg-white p-4 sm:p-5 lg:p-6 overflow-hidden">
+              <div className="bg-white  overflow-hidden">
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="w-full border-none object-contain transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
@@ -236,7 +236,7 @@ ${
                   {cert.title}
                 </h3>
                 <p
-                  className="mt-3 lg:mt-4 h-[80px] overflow-hidden
+                  className="mt-3 lg:mt-4 h-fit overflow-hidden
               text-[#949391] text-sm sm:text-[15px] lg:text-base
               leading-relaxed font-poppins"
                 >
