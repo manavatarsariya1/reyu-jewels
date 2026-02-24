@@ -6,7 +6,7 @@ const navLinks = [
     { label: "About Us", scrollTo: "about" },
     { label: "Diamonds", scrollTo: "diamonds" },
     { label: "Collection", scrollTo: "collection", isNew: true },
-    { label: "Services", scrollTo: "services" },
+    { label: "Testinomials", scrollTo: "services" },
     { label: "Contact", scrollTo: "contact" },
     { label: "Certificates", scrollTo: "certificates" },
 ];
