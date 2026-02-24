@@ -32,17 +32,11 @@ const AboutSection = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
-        // xl = 1280px — everything below is mobile/tablet vertical layout
         const checkMobile = () => setIsMobile(window.innerWidth < 1280);
         checkMobile();
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
-
-    const handleClick = (index: number) => {
-        if (!isMobile) return;
-        setActiveIndex(prev => (prev === index ? null : index));
-    };
 
     const handleMouseEnter = (index: number) => {
         if (isMobile) return;
@@ -54,12 +48,18 @@ const AboutSection = () => {
         setActiveIndex(null);
     };
 
+    // Mirrors DiamondTypesSection: onTouchStart toggles expand instantly on finger touch
+    const handleTouchStart = (index: number) => {
+        if (!isMobile) return;
+        setActiveIndex(prev => (prev === index ? null : index));
+    };
+
     return (
-        <div id="about" className=" w-full xl:px-20 px-5 xl:py-40 py-15">
+        <div id="about" className="w-full xl:px-20 px-5 xl:py-40 py-15">
             <div className="flex flex-col xl:flex-row gap-10 xl:gap-16 items-start">
 
                 {/* ===== LEFT — About Text ===== */}
-                <div className="w-full xl:w-[30%] flex-shrink-0 xl:pt-4">
+                <div className="w-full xl:w-[30%] flex-shrink-0 xl:pt-4 pb-10">
                     <h2 className="font-gilroy font-semibold text-white text-2xl xl:text-3xl 2xl:text-4xl mb-5 leading-snug text-center xl:text-start">
                         About Reyu Jewels
                     </h2>
@@ -69,10 +69,6 @@ const AboutSection = () => {
                 </div>
 
                 {/* ===== RIGHT — Cards ===== */}
-                {/*
-                  Mobile + Tablet (< 1280px): vertical stack, each card full width, capped at 500px
-                  Desktop (≥ 1280px): horizontal row, 1/3 width each, grows upward on hover
-                */}
                 <div className="w-full xl:w-[70%] flex flex-col xl:flex-row gap-4 xl:items-end">
                     {cards.map((card, index) => {
                         const isActive = activeIndex === index;
@@ -80,9 +76,9 @@ const AboutSection = () => {
                         return (
                             <div
                                 key={index}
-                                onClick={() => handleClick(index)}
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={handleMouseLeave}
+                                onTouchStart={() => handleTouchStart(index)}
                                 className={`
                                     relative flex flex-col w-full xl:w-1/3 rounded-3xl overflow-hidden cursor-pointer mx-auto
                                     ${isActive

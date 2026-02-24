@@ -156,14 +156,14 @@ const ClientReviewSection = () => {
 
     return (
         <div
-            id="services"
+            
             className="w-full bg-[#5C4730]"
             style={{ borderRadius: '24px', overflow: 'hidden' }}
         >
             <div className="flex flex-col lg:flex-row w-full pb-20 ">
 
                 {/* ── LEFT: Title block ── */}
-                <div className="w-full lg:w-[35%] flex-shrink-0 px-6 sm:px-10 xl:px-16 pt-8 sm:pt-10 pb-6 lg:py-0 flex flex-col justify-center mb-7 sm:mb-0">
+                <div id="services" className="w-full lg:w-[35%] flex-shrink-0 px-6 sm:px-10 xl:px-16 pt-8 sm:pt-10 pb-6 lg:py-0 flex flex-col justify-center mb-7 sm:mb-0">
                     <h2 className="font-gilroy font-bold text-white text-2xl sm:text-3xl mb-3 leading-snug lg:text-start text-center">
                         What Our Clients Say
                     </h2>
