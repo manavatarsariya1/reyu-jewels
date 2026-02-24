@@ -13,6 +13,7 @@ import CollectionSection from '../components/LandingPage/CollectionSection'
 import HowItWorks from '../components/LandingPage/HowItWorks'
 import ClientReviewSection from '../components/LandingPage/ClientReviewSection'
 import VoicesOfDistinction from '../components/LandingPage/VoicesOfDistinction'
+import WhatsAppButton from "../components/common/WhatsAppButton";
 
 const LandingPage = () => {
   return (
@@ -34,6 +35,7 @@ const LandingPage = () => {
       <Contact />
       <Certificates />
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

@@ -54,7 +54,7 @@ const ContactSection = () => {
      focus:border-[#B88F5F] transition-colors duration-200 text-sm md:text-base`;
 
   return (
-    <section className="w-full bg-[#202020] py-10 md:py-16 lg:py-20
+    <section id="contact" className="w-full bg-[#202020] py-10 md:py-16 lg:py-20
                         px-4 sm:px-6 md:px-10 lg:px-16">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-12 md:gap-16 lg:gap-24">
 

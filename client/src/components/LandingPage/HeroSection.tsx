@@ -6,7 +6,7 @@ const MOBILE_H = 320;
 
 const HeroSection = () => {
   return (
-    <div className="w-full px-2 py-9">
+    <div className="w-full px-2 py-5">
       <div className="relative w-full flex flex-col md:flex-row gap-2">
 
         {/* ===== LEFT — Jewelry Image ===== */}

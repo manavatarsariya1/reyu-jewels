@@ -7,15 +7,15 @@ const navLinks = [
     { label: "Diamonds", scrollTo: "diamonds" },
     { label: "Collection", scrollTo: "collection", isNew: true },
     { label: "Services", scrollTo: "services" },
-    { label: "Certificates", scrollTo: "certificates" },
     { label: "Contact", scrollTo: "contact" },
+    { label: "Certificates", scrollTo: "certificates" },
 ];
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="sticky top-0 px-5 sm:px-10 xl:px-20 py-5 z-50 bg-[#202020] ">
+        <div className="sticky top-0 px-5 sm:px-10 xl:px-20 sm:py-5 py-4 z-50 bg-[#202020] ">
             <div className="flex justify-between items-center w-full">
 
                 {/* Logo */}

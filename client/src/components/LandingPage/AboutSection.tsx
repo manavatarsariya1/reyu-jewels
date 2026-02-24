@@ -25,7 +25,7 @@ const cards = [
 ];
 
 const CARD_COLLAPSED_H = 270;
-const CARD_EXPANDED_H = 370;
+const CARD_EXPANDED_H = 400;
 
 const AboutSection = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -130,7 +130,7 @@ const AboutSection = () => {
                                         transitionDelay: isActive ? '150ms' : '0ms',
                                     }}
                                 >
-                                    <p className="font-montserrat font-medium text-white text-sm leading-relaxed pb-5">
+                                    <p className="font-montserrat font-medium text-white xl:text-sm md:text-lg text-sm leading-relaxed pb-5">
                                         {card.description}
                                     </p>
                                 </div>

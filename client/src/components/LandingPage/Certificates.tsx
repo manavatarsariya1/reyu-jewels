@@ -81,7 +81,7 @@ const Certifications = () => {
   const atEnd   = index >= maxIndex;
 
   return (
-    <section className="w-full bg-[#202020] py-10 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-16">
+    <section id="certificates" className="w-full bg-[#202020] py-10 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-16">
       <div className="max-w-[1440px] mx-auto">
 
         {/* Header */}

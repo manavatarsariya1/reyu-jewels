@@ -156,7 +156,7 @@ const ClientReviewSection = () => {
 
     return (
         <div
-            id="testimonials"
+            id="services"
             className="w-full bg-[#5C4730]"
             style={{ borderRadius: '24px', overflow: 'hidden' }}
         >
@@ -167,7 +167,7 @@ const ClientReviewSection = () => {
                     <h2 className="font-gilroy font-bold text-white text-2xl sm:text-3xl mb-3 leading-snug lg:text-start text-center">
                         What Our Clients Say
                     </h2>
-                    <p className="font-montserrat font-medium text-white/65 text-xs sm:text-sm leading-relaxed">
+                    <p className="font-montserrat font-medium text-white/65 text-xs sm:text-sm leading-relaxed text-center  lg:text-start">
                         Discover why discerning customers choose Reyu Jewels for their most precious moments.
                     </p>
                 </div>

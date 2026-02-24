@@ -102,7 +102,7 @@ const DiamondTypesSection = () => {
                                 <div
                                     className="overflow-hidden transition-all duration-500 ease-in-out"
                                     style={{
-                                        maxHeight: isHovered ? '300px' : '0px',
+                                        maxHeight: isHovered ? '190px' : '0px',
                                         opacity: isHovered ? 1 : 0,
                                         marginTop: isHovered ? '12px' : '0px',
                                     }}
