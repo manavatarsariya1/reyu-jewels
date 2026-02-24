@@ -11,6 +11,7 @@ const config: Config = {
         montserrat: ["Montserrat", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
         gilroy: ["Gilroy", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"], 
       },
     },
   },

@@ -11,31 +11,30 @@ const ContactSection = () => {
 
   const [errors, setErrors] = useState<any>({});
 
-  const validate = () => {
-    const newErrors: any = {};
+const validate = () => {
+  const newErrors: any = {};
 
-    if (!formData.fullName.trim())
-      newErrors.fullName = "Full name is required";
+  if (!formData.fullName.trim())
+    newErrors.fullName = "Full name is required";
 
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
-      newErrors.email = "Invalid email address";
-    }
+  if (!formData.email.trim()) {
+    newErrors.email = "Email is required";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
+    newErrors.email = "Invalid email address";
+  }
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
-    } else if (!/^[6-9]\d{9}$/.test(formData.phone.replace(/\s+/g, ""))) {
+  // Phone optional → validate only if user typed something
+  if (formData.phone.trim()) {
+    if (!/^[6-9]\d{9}$/.test(formData.phone.replace(/\s+/g, ""))) {
       newErrors.phone = "Enter valid 10-digit Indian number";
     }
+  }
 
-    if (!formData.message.trim())
-      newErrors.message = "Message cannot be empty";
+  // Message optional → no validation needed
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
+};
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (validate()) {
@@ -81,6 +80,7 @@ const ContactSection = () => {
           {/* ── FORM PANEL ──────────────────────────────────────── */}
           <form
             onSubmit={handleSubmit}
+            noValidate
             className="bg-black p-6 sm:p-8 md:p-10 lg:p-14 flex flex-col gap-3"
           >
             <h3 className="text-white text-lg md:text-xl lg:text-[22px] font-medium font-gilroy mb-2">
@@ -101,7 +101,7 @@ const ContactSection = () => {
             {/* Email */}
             <label className="text-gray-400 text-sm md:text-base mt-2 font-montserrat">Email Address</label>
             <input
-              type="email"
+              type="text"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className={inputClass("email")}
@@ -138,7 +138,7 @@ const ContactSection = () => {
               type="submit"
               className="mt-4 w-full bg-[#B88F5F] hover:bg-[#a37a4a]
                          transition-colors duration-300 text-white
-                         py-3 text-sm md:text-base tracking-wide"
+                         py-3 text-sm md:text-base tracking-wide font-gilroy"
             >
               Submit Enquiry
             </button>
@@ -146,7 +146,7 @@ const ContactSection = () => {
 
           {/* ── SHOWROOM PANEL ──────────────────────────────────── */}
           <div className="bg-black p-6 sm:p-8 md:p-10 lg:p-14 flex flex-col gap-6 md:gap-8">
-            <h3 className="text-white text-lg md:text-xl lg:text-[22px] font-medium mb-2">
+            <h3 className="text-white text-lg md:text-xl lg:text-[22px] font-gilroy mb-2">
               Visit Our Showroom
             </h3>
 
