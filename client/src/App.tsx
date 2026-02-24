@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <div className='w-screen overflow-x-hidden'>
+    <div className=''>
 
      <RouterProvider router={AppRoutes}/>
       
