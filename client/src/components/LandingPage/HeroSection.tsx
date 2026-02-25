@@ -1,8 +1,8 @@
 import handImage from "../../assets/LandingPage/handImage.png";
 import diamondImage from "../../assets/LandingPage/diamond.png";
 import video from "../../assets/LandingPage/Reyujewels_video.mp4"
-
 // Mobile image panel height — seam sits exactly here
+
 const MOBILE_H = 320;
 
 const HeroSection = () => {
@@ -23,7 +23,6 @@ const HeroSection = () => {
             autoPlay
             loop
             playsInline
-            title="Jewelry video"
           />
         </div>
 
@@ -89,11 +88,11 @@ const HeroSection = () => {
             md:top-1/2  md:-translate-y-1/2
           "
         >
-          <img
+          {/* <img
             src={diamondImage}
             alt="Diamond"
             className="w-40 md:w-50 lg:w-60 xl:w-72 h-auto drop-shadow-2xl"
-          />
+          /> */}
         </div>
 
         {/* </div> */}
