@@ -8,14 +8,10 @@ import Footer from "../components/layout/Footer";
 const LandingPage = () => {
   return (
     <>
-
       <CEOSection />
       <Contact />
       <Certificates />
       <Footer />
-   
-     
-  
     </>
   );
 };
