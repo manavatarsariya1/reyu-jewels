@@ -1,5 +1,6 @@
 import handImage from "../../assets/LandingPage/handImage.png";
 import diamondImage from "../../assets/LandingPage/diamond.png";
+import video from "../../assets/LandingPage/Reyujewels_video.mp4"
 
 // Mobile image panel height — seam sits exactly here
 const MOBILE_H = 320;
@@ -14,10 +15,15 @@ const HeroSection = () => {
           className="relative w-full md:w-[45%] md:min-h-[620px] flex-shrink-0 rounded-3xl overflow-hidden"
           style={{ height: `${MOBILE_H}px` }}
         >
-          <img
-            src={handImage}
-            alt="Jewelry"
+          <video
+            src={video}
+            poster={handImage}
             className="w-full h-full object-cover"
+            muted
+            autoPlay
+            loop
+            playsInline
+            title="Jewelry video"
           />
         </div>
 
